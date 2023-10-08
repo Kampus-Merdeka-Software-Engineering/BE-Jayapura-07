@@ -35,7 +35,10 @@ module.exports = {
       shipping_method: {
         type: Sequelize.ENUM("Same Day", "Reguler", "Kargo"),
         allowNull: false
-      }
+      },
+      payment_method: {
+        type: Sequelize.ENUM("COD", "E-Wallet", "Transfer Bank", "Kredit"),
+        allowNull: false
     })
   },
 
