@@ -39,6 +39,7 @@ module.exports = {
       payment_method: {
         type: Sequelize.ENUM("COD", "E-Wallet", "Transfer Bank", "Kredit"),
         allowNull: false
+      }
     })
   },
 
