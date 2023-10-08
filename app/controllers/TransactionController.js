@@ -8,6 +8,7 @@ const createTransaction = async (req, res) =>
         email: req.body.email,
         address: req.body.address,
         shipping_method: req.body.shipping_method,
+        payment_method: req.body.payment_method,
     })
 
     const transactionData = req.body.details.map((detail) => ({
