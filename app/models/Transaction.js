@@ -25,7 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         shipping_method: {
             type: DataTypes.ENUM("Same Day", "Reguler", "Kargo"),
             allowNull: false
-        }
+        },
+        payment_method: {
+        type: Sequelize.ENUM("COD", "E-Wallet", "Transfer Bank", "Kredit"),
+        allowNull: false
     }, 
     {
         timestamps: false,
