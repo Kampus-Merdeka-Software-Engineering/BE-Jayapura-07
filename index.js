@@ -17,6 +17,6 @@ app.use("/api/transaction", transactionRouter);
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, "0.0.0.0", () => {
+app.listen(port, () => {
     console.log("Express API running in port: " + port);
   });
