@@ -15,6 +15,8 @@ app.use(cors());
 app.use("/api/products", productRouter);
 app.use("/api/transaction", transactionRouter);
 
-app.listen(process.env.APP_PORT, () => {
-    console.log("Express API running in port: " + process.env.APP_PORT);
+const port = process.env.PORT || 3000;
+
+app.listen(port, "0.0.0.0", () => {
+    console.log("Express API running in port: " + port);
   });
