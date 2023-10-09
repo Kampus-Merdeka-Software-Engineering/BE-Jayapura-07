@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express") // ini perlu
-// const cors = require("cors")
+const cors = require("cors")
 const fs = require("fs")
 
 // init express server and router
@@ -10,7 +10,7 @@ const transactionRouter = require('./app/routes/transaction-routes');
 const { sequelize } = require("./app/models");
 
 app.use(express.json()); // supaya express bisa response json
-// app.use(cors());
+app.use(cors());
 // http router prefix
 app.use("/api/products", productRouter);
 app.use("/api/transaction", transactionRouter);
